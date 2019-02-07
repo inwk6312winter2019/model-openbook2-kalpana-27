@@ -1,6 +1,7 @@
+
 fin = open("Street_Centrelines.csv","r")
 
-#task1
+'''#task1
 def myfile(fin):
   list1 = []
   for line in fin:
@@ -42,7 +43,18 @@ def unique(fin):
 		list1.append(key)
 	print(list1)
 
-unique(fin)
+unique(fin)'''
 
- 
+#Task4
 
+def myfile(fin):
+  list1 = []
+  d = {}
+  for line in fin:  
+    line = line.split(",")
+    if line[10] not in d:
+      d[line[10]]=(line[2])
+    print(d)
+   
+
+myfile(fin)
